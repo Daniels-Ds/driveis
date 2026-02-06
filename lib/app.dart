@@ -1,3 +1,5 @@
+import 'package:driveis/core/navigation/app_routes.dart';
+import 'package:driveis/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 
 class MyApp extends StatelessWidget {
@@ -8,7 +10,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'DriveIS',
       debugShowCheckedModeBanner: false,
-      home: Scaffold(body: Center(child: Text('MVP старт'))),
+      theme: AppTheme.light,
+      initialRoute: AppRouter.login,
+      routes: AppRouter.routes,
     );
   }
 }
